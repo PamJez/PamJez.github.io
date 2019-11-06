@@ -8,6 +8,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2, h4{
@@ -88,7 +89,11 @@ input[type=checkbox]:checked ~ .menu{
 
 .welcome {
     color: var(--font-color);
-    padding: 70px;
+    padding-top: 35px;
+    padding-left: 100px;
+    font-size: 20px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    letter-spacing: 2px;
 }
 
 /* About me */
@@ -174,7 +179,7 @@ input[type=checkbox]:checked ~ .menu{
 /* Skills */
 
 .skills {
-    margin: 15px 0;
+    margin: 15px 20px;
 }
 
 .ability_container{
@@ -197,7 +202,7 @@ input[type=checkbox]:checked ~ .menu{
     height: 112px;
     text-align: center;
 }
-.overlay div:last-child{
+.overlay div:nth-child(3){
     position: absolute;
     left: 0;
     bottom: 0;
@@ -229,6 +234,20 @@ input[type=checkbox]:checked ~ .menu{
     height: 55%;
     transition: all 0.5s ease-out;
 }
+.overlay:hover .amount {
+    opacity: 1;
+}
+
+.amount {
+    position: absolute;
+    top: 40%;
+    left:30%;
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    color: var(--dark-color);
+}
 
 .skills_title {
     font-size: 15px;
@@ -242,7 +261,6 @@ input[type=checkbox]:checked ~ .menu{
 
 .portfolio_all {
     background-color: var(--item-bg-color);
-
     margin: 30px 20px 20px 20px;
     border-radius: 3%;
 }
@@ -295,11 +313,10 @@ input[type=checkbox]:checked ~ .menu{
     width: 60%;
     height: auto;
     margin: 0 auto;
-    padding: 10px 0;
-    
+    padding: 10px 0;    
 }
 
-.form > * {
+.form > input {
     width: 97%;
     height: 30px;
     padding: 5px 10px;
@@ -309,10 +326,7 @@ input[type=checkbox]:checked ~ .menu{
     background-color: rgba(76, 96, 100, 0.3);
     border: 2px solid #fff;
     margin-bottom: 7px;
-}
-
-input {
-    text-align: center;   
+    text-align: center; 
 }
 
 input[type="message"] {
@@ -320,16 +334,24 @@ input[type="message"] {
 }
 
 input[type="submit"] {
-    width: 100%;
-    /* padding: 5px 10px; */
+    box-sizing: content-box;
     font-size: 12px;
-    letter-spacing: 1px;
     background-color: rgb(76, 96, 100);
     height: 40px;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }  
 
+/* Footer */
+
+.footer {
+    background-color: var(--dark-color);
+    line-height: 30px;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(96, 119, 124);
+}
 
 /* Media Queries */
 
@@ -368,6 +390,11 @@ input[type="submit"] {
     .menubar {
         display:block;
     }
+    .welcome {
+        padding-left: 50px;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }  
     .port_item {
         width: 100%;
     }  
